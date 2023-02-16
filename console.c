@@ -426,6 +426,7 @@ void init_cmd()
                 "Display or set options. See 'Options' section for details",
                 "[name val]");
     ADD_COMMAND(quit, "Exit program", "");
+    ADD_COMMAND(hello, "Print hello message", "");
     ADD_COMMAND(source, "Read commands from source file", "");
     ADD_COMMAND(log, "Copy output to file", "file");
     ADD_COMMAND(time, "Time command execution", "cmd arg ...");
@@ -706,4 +707,9 @@ bool run_console(char *infile_name)
     }
 
     return err_cnt == 0;
+}
+
+bool do_hello(int argc, char *argv[])
+{
+    return (bool) printf("Hello, World\n");
 }

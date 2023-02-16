@@ -71,4 +71,7 @@ bool run_console(char *infile_name);
 /* Callback function to complete command by linenoise */
 void completion(const char *buf, line_completions_t *lc);
 
+/* Print hello world message*/
+bool do_hello(int argc, char *argv[]);
+
 #endif /* LAB0_CONSOLE_H */
